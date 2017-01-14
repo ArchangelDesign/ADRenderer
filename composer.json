@@ -1,5 +1,5 @@
 {
-  "name": "archangeldesign/ad-README.mdrenderer",
+  "name": "archangeldesign/ad-renderer",
   "description": "PHP Renderer module for rendering HTML, XML, JSON, YML",
   "license": "BSD-3-Clause",
   "type": "library",
