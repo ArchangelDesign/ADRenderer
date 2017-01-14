@@ -1,0 +1,38 @@
+{
+  "name": "archangeldesign/ad-README.mdrenderer",
+  "description": "PHP Renderer module for rendering HTML, XML, JSON, YML",
+  "license": "BSD-3-Clause",
+  "type": "library",
+  "keywords": [
+    "archangeldesign",
+    "html",
+    "xml",
+    "php"
+  ],
+  "authors": [
+    {
+      "name": "Rafal Martinez-Marjanski"
+    }
+  ],
+  "homepage": "http://archangel-design.com",
+  "autoload": {
+    "psr-0": {
+      "ADRenderer" : "src/"
+    }
+  },
+  "require": {
+    "php": ">=5.5"
+  },
+  "require-dev": {
+  },
+  "suggest": {
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0",
+      "dev-develop": "1.0"
+    }
+  }
+}
