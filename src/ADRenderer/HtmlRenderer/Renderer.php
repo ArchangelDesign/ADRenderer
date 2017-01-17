@@ -2,6 +2,7 @@
 /**
  * @author Rafal Martinez-Marjanski
  * @date 2017-01-08
+ * @copyright www.archangel-design.com
  */
 
 namespace ADRenderer\HtmlRenderer;

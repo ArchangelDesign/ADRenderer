@@ -2,10 +2,12 @@
 /**
  * @author Rafal Martinez-Marjanski
  * @date 2017-01-08
+ * @copyright www.archangel-design.com
  */
 
 namespace ADRenderer\HtmlRenderer;
 
+use ADRenderer\IllegalUsageException;
 use ADRenderer\IncorrectDataException;
 
 /**
@@ -26,6 +28,12 @@ class Table implements HtmlElementInterface
 
     private $columnCount = 0;
 
+    /**
+     * Table constructor.
+     * @param null|string $id
+     * @param null|string $class
+     * @param null|string $inline
+     */
     public function __construct($id = null, $class = null, $inline = null)
     {
         $this->id = $id;
@@ -33,8 +41,15 @@ class Table implements HtmlElementInterface
         $this->inline = $inline;
     }
 
+    /**
+     * @param array $labels
+     * @throws IllegalUsageException
+     */
     public function addHeader(array $labels)
     {
+        if (!empty($this->header)) {
+            throw new IllegalUsageException("Table header should not be overwritten.");
+        }
         $this->header = $labels;
         $this->columnCount = count($labels);
     }
@@ -45,6 +60,11 @@ class Table implements HtmlElementInterface
             throw new IncorrectDataException('Value count does not match column count.');
         }
         $this->rows[] = $values;
+    }
+
+    public function addRowExtended(TableRow $row)
+    {
+        // @todo implement
     }
 
     public function getRendered()
