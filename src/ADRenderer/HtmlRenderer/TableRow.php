@@ -8,7 +8,7 @@
 namespace ADRenderer\HtmlRenderer;
 
 
-class TableRow implements \Traversable
+class TableRow
 {
     private $columns = [];
 
@@ -19,5 +19,10 @@ class TableRow implements \Traversable
             'colspan' => $colSpan,
             'inline' => $inline,
         ];
+    }
+
+    public function getColumnCount()
+    {
+        return count($this->columns);
     }
 }

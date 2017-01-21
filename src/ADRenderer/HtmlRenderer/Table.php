@@ -64,7 +64,7 @@ class Table implements HtmlElementInterface
 
     public function addRowExtended(TableRow $row)
     {
-        // @todo implement
+        $this->rows[] = $row;
     }
 
     public function getRendered()
