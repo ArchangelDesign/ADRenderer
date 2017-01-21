@@ -101,8 +101,15 @@ class Table implements HtmlElementInterface
 
         foreach ($this->rows as $row) {
             $result .= "<tr>";
-            foreach ($row as $column) {
-                $result .= "<td>$column</td>";
+            if ($row instanceof TableRow) {
+                $columns = $row->getColumns();
+                foreach ($columns as $column) {
+                    $result .= "<td colspan='$column[colspan]' style='$column[inline]'>$column[value]</td>";
+                }
+            } else {
+                foreach ($row as $column) {
+                    $result .= "<td>$column</td>";
+                }
             }
             $result .= "</tr>";
         }

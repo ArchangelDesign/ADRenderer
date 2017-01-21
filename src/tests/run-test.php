@@ -34,7 +34,7 @@ array_walk($tests, function($test) {
     if ($test == '.' || $test == '..' || $test == 'autoload.php') {
         return;
     }
-    ad_printf("running test $test");
+    ad_printf("running $test...");
     try {
         $result = include __DIR__ . '/src/' . $test;
     } catch (Exception $e) {

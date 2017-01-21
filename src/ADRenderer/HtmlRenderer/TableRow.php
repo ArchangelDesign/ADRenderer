@@ -7,7 +7,10 @@
 
 namespace ADRenderer\HtmlRenderer;
 
-
+/**
+ * Class TableRow
+ * @package ADRenderer\HtmlRenderer
+ */
 class TableRow
 {
     private $columns = [];
@@ -24,5 +27,10 @@ class TableRow
     public function getColumnCount()
     {
         return count($this->columns);
+    }
+
+    public function getColumns()
+    {
+        return $this->columns;
     }
 }
